@@ -1,0 +1,10 @@
+torch
+torchvision
+timm
+pyyaml
+tqdm
+scikit-learn
+tensorboard
+fastapi
+uvicorn
+pillow

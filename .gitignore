@@ -1,0 +1,22 @@
+# --- Python Specific ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# --- Project Specific Data ---
+# Exclude the actual dataset and examples to keep the repo light
+Palm example/
+
+# --- Training Outputs ---
+# Exclude folders where model weights and training logs are saved
+checkpoints/
+checkpoints0/
+runs/
+
+# --- Configs ---
+# If config.yaml contains local paths or secrets, ignore it. 
+# Otherwise, keep it tracked but ignore local variations.
+# configs/config.yaml

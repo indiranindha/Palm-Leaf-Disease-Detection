@@ -1,0 +1,36 @@
+experiment:
+  name: palm_leaf_disease_detection
+
+data:
+  train_dir: Dataset/train
+  val_dir: Dataset/val
+  test_dir: Dataset/test
+  num_classes: 9
+  image_size: 224
+  # num_workers: 4
+
+training:
+  batch_size: 4
+  epochs: 10
+  # learning_rate: 0.0005 / 3e-4
+  weight_decay: 0.0001
+  freeze_backbone: true
+
+scheduler:
+  type: cosine
+  t_max: 20
+  # min_lr: 0.0001
+
+loss:
+  type: cross_entropy
+  label_smoothing: 0.1
+
+inference:
+  confidence_threshold: 0.6
+
+model:
+  name: convnext_tiny
+
+logging:
+  log_dir: runs
+  checkpoint_dir: checkpoints
